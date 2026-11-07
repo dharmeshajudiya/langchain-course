@@ -38,7 +38,7 @@ def run_agent(question: str):
     tools = [get_product_price, apply_discount]
     tools_dict = {tool.name: tool for tool in tools}
 
-    #llm = init_chat_model(f"ollama:{MODEL}", temperature=0)
+    # llm = init_chat_model(f"ollama:{MODEL}", temperature=0)
     llm = init_chat_model(f"openai:gpt-5", temperature=0)
     llm_with_tools = llm.bind_tools(tools)
 
